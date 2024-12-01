@@ -1,0 +1,64 @@
+** Generated for: hspiceD
+** Generated on: Nov 12 21:06:46 2024
+** Design library name: nod
+** Design cell name: tb_OTA_two
+** Design view name: schematic
+.GLOBAL vdd!
+.PARAM cap=3p l1=500n l2=500n l3=500n l4=500n l5=500n r=2K w1=3u w2=45u 
++	w3=1.75u w4=6u w5=40u
+
+
+.DC    
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
++    HIER_DELIM=0
+.LIB "C:/DAC/tSS-BO-main/Simulation/Data/TSMC40/models/hspice/toplevel_crn40lp_1d8_v2d0_2_shrink0d9_embedded_usage.l" TOP_TT
+
+** Library name: nod
+** Cell name: OTA_two
+** View name: schematic
+.subckt OTA_two ibias1 ibias2 out _net0 _net1
+m8 ibias2 ibias2 0 0 nch l=1e-6 w=9e-6 m=1 nf=1 sd=140e-9 ad=990e-15 as=990e-15 pd=18.22e-6 ps=18.22e-6 nrd=3.537e-3 nrs=3.537e-3 sa=110e-9 sb=110e-9
+m7 ibias1 ibias1 0 0 nch l=1e-6 w=9e-6 m=1 nf=1 sd=140e-9 ad=990e-15 as=990e-15 pd=18.22e-6 ps=18.22e-6 nrd=3.537e-3 nrs=3.537e-3 sa=110e-9 sb=110e-9
+m6 out ibias2 0 0 nch l=l5 w=w5 m=1 nf=1 sd=140e-9 ad='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*70e-9)*w5)/1' as='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*150e-9)*w5)/1' pd='(1-int(500e-3)*2)*(220e-9+(2*w5)/1)+(2-int(1.0)*2)*(140e-9+(1*w5)/1)' ps='(1-int(500e-3)*2)*(220e-9+(2*w5)/1)+(2-int(1.0)*2)*(300e-9+(3*w5)/1)'
+m3 net7 _net0 net4 net4 nch l=l1 w=w1 m=1 nf=1 sd=140e-9 ad='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*70e-9)*w1)/1' as='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*150e-9)*w1)/1' pd='(1-int(500e-3)*2)*(220e-9+(2*w1)/1)+(2-int(1.0)*2)*(140e-9+(1*w1)/1)' ps='(1-int(500e-3)*2)*(220e-9+(2*w1)/1)+(2-int(1.0)*2)*(300e-9+(3*w1)/1)'
+m2 net1 _net1 net4 net4 nch l=l1 w=w1 m=1 nf=1 sd=140e-9 ad='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*70e-9)*w1)/1' as='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*150e-9)*w1)/1' pd='(1-int(500e-3)*2)*(220e-9+(2*w1)/1)+(2-int(1.0)*2)*(140e-9+(1*w1)/1)' ps='(1-int(500e-3)*2)*(220e-9+(2*w1)/1)+(2-int(1.0)*2)*(300e-9+(3*w1)/1)'
+m0 net4 ibias1 0 0 nch l=l4 w=w4 m=1 nf=1 sd=140e-9 ad='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*70e-9)*w4)/1' as='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*150e-9)*w4)/1' pd='(1-int(500e-3)*2)*(220e-9+(2*w4)/1)+(2-int(1.0)*2)*(140e-9+(1*w4)/1)' ps='(1-int(500e-3)*2)*(220e-9+(2*w4)/1)+(2-int(1.0)*2)*(300e-9+(3*w4)/1)'
+m5 out net7 vdd! vdd! pch l=l2 w=w2 m=1 nf=1 sd=140e-9 ad='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*70e-9)*w2)/1' as='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*150e-9)*w2)/1' pd='(1-int(500e-3)*2)*(220e-9+(2*w2)/1)+(2-int(1.0)*2)*(140e-9+(1*w2)/1)' ps='(1-int(500e-3)*2)*(220e-9+(2*w2)/1)+(2-int(1.0)*2)*(300e-9+(3*w2)/1)'
+m4 net7 net1 vdd! vdd! pch l=l3 w=w3 m=1 nf=1 sd=140e-9 ad='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*70e-9)*w3)/1' as='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*150e-9)*w3)/1' pd='(1-int(500e-3)*2)*(220e-9+(2*w3)/1)+(2-int(1.0)*2)*(140e-9+(1*w3)/1)' ps='(1-int(500e-3)*2)*(220e-9+(2*w3)/1)+(2-int(1.0)*2)*(300e-9+(3*w3)/1)'
+m1 net1 net1 vdd! vdd! pch l=l3 w=w3 m=1 nf=1 sd=140e-9 ad='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*70e-9)*w3)/1' as='(((1-int(500e-3)*2)*110e-9+(2-int(1.0)*2)*150e-9)*w3)/1' pd='(1-int(500e-3)*2)*(220e-9+(2*w3)/1)+(2-int(1.0)*2)*(140e-9+(1*w3)/1)' ps='(1-int(500e-3)*2)*(220e-9+(2*w3)/1)+(2-int(1.0)*2)*(300e-9+(3*w3)/1)'
+c0 net7 net10 cap
+r0 net10 out r
+.ends OTA_two
+** End of subcircuit definition.
+
+** Library name: nod
+** Cell name: tb_OTA_two
+** View name: schematic
+xi0 ibias1 ibias2 net4 net1 net3 OTA_two
+i6 vdd! ibias2 DC=40e-6
+i3 vdd! ibias1 DC=40e-6
+v5 net3 net4 DC=0 AC 1 0
+v2 vdd! 0 DC=1.8
+v0 net1 0 DC=900e-3
+c0 net4 0 10e-12
+
+.control
+op
+AC DEC 10 0.01 100000K
+settype decibel net4
+settype decibel net3
+plot db(net4/net3) xlimit 1 100000k ylabel 'small signal gain'
+settype phase net4
+settype phase net3
+plot cph(net4/net3) xlimit 1 100000k ylabel 'phase (in rad)'
+let outd = 180/PI*cph(net4/net3)
+settype phase outd
+plot outd xlimit 1 100000k ylabel 'phase'
+.endc
+.END

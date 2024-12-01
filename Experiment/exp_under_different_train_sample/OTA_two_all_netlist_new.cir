@@ -1,0 +1,81 @@
+** Generated for: hspiceD
+** Generated on: Feb 18 03:10:46 2024
+** Design library name: ZYX_try
+** Design cell name: tb_OTA_two
+** Design view name: schematic
+.GLOBAL vdd!
+.PARAM cap=2.1pf l1=0.85u l2=0.79u l3=0.57u l4=0.86u l5=1.80u r=2912.5819084542895 w1=2.84u w2=45.36u w3=15.00u w4=4.15u w5=9.27u
+
+
+
+.AC DEC 10  
+
+.DC    
+
+.TEMP 25.0
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    PARHIER=LOCAL
++    PSF=2
++    HIER_DELIM=0
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\ms018_enhanced_v1p11.lib" TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\ms018_enhanced_v1p11.lib" BJT_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\ms018_enhanced_v1p11.lib" DIO_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\ms018_enhanced_v1p11.lib" RES_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\ms018_enhanced_v1p11.lib" MIM_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\ms018_enhanced_v1p11.lib" VAR_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" RES_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" MIM_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" VAR_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" IND_RF_PSUB_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" IND_RF_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" 3TDIFF_PSUB_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" 3TDIFF_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" 2TDIFF_PSUB_TT
+.LIB "C:\Users\icelab01\Desktop\ZhuohuaLiu_2024_BYA_jiebang\BYA_jiebang\BYA_jiebang\Knowledge_unbinding\Simulation\Data\smic18\models\hspice\mse018_v1p11_rf.lib" 2TDIFF_TT
+
+** Library name: ZYX_try
+** Cell name: OTA_two
+** View name: schematic
+.subckt OTA_two_schematic ibias1 ibias2 out _net0 _net1
+mnm9 ibias2 ibias2 0 0 n18 m=1 w=7e-6 l=1e-6 nf=1 ad=3.36e-12 as=3.36e-12 pd=14.96e-6 ps=14.96e-6 nrd=38.5714e-3 nrs=38.5714e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+mnm5 net3 _net0 net1 0 n18 m=1 w=w1 l=l1 nf=4 ad='w1/4<419.5e-9?(int(2.0)*(176.4e-15+(w1/4)*200e-9)+(2.0-int(2.0)!=0?176.4e-15+(w1/4)*100e-9:0))/1:(int(2.0)*(540e-9*(w1/4))+(2.0-int(2.0)!=0?480e-9*(w1/4):0))/1' as='w1/4<419.5e-9?((((176.4e-15+(w1/4)*100e-9)+0*(w1/4<419.5e-9?420e-9:w1/4))+int(1.5)*(176.4e-15+(w1/4)*200e-9))+(2.0-int(2.0)==0?176.4e-15+(w1/4)*100e-9:0))/1:(((480e-9*(w1/4)+0*(w1/4<419.5e-9?420e-9:w1/4))+int(1.5)*(540e-9*(w1/4)))+(2.0-int(2.0)==0?480e-9*(w1/4):0))/1' pd='w1/4<419.5e-9?(int(2.0)*2.08e-6+(2.0-int(2.0)!=0?1.88e-6:0))/1:(int(2.0)*(1.08e-6+2*(w1/4))+(2.0-int(2.0)!=0?960e-9+2*(w1/4):0))/1' ps='w1/4<419.5e-9?((1.88e-6+int(1.5)*2.08e-6)+(2.0-int(2.0)==0?1.88e-6:0))/1:((((960e-9+2*(w1/4))+0)+int(1.5)*(1.08e-6+2*(w1/4)))+(2.0-int(2.0)==0?960e-9+2*(w1/4):0))/1' nrd='270e-9/((w1/4)*4)' nrs='270e-9/((w1/4)*4)' sa='w1/4<419.5e-9?520e-9:480e-9' sb='w1/4<419.5e-9?520e-9:480e-9' sd='w1/4<419.5e-9?620e-9:540e-9' sca=0 scb=0 scc=0
+mnm4 net2 _net1 net1 0 n18 m=1 w=w1 l=l1 nf=4 ad='w1/4<419.5e-9?(int(2.0)*(176.4e-15+(w1/4)*200e-9)+(2.0-int(2.0)!=0?176.4e-15+(w1/4)*100e-9:0))/1:(int(2.0)*(540e-9*(w1/4))+(2.0-int(2.0)!=0?480e-9*(w1/4):0))/1' as='w1/4<419.5e-9?((((176.4e-15+(w1/4)*100e-9)+0*(w1/4<419.5e-9?420e-9:w1/4))+int(1.5)*(176.4e-15+(w1/4)*200e-9))+(2.0-int(2.0)==0?176.4e-15+(w1/4)*100e-9:0))/1:(((480e-9*(w1/4)+0*(w1/4<419.5e-9?420e-9:w1/4))+int(1.5)*(540e-9*(w1/4)))+(2.0-int(2.0)==0?480e-9*(w1/4):0))/1' pd='w1/4<419.5e-9?(int(2.0)*2.08e-6+(2.0-int(2.0)!=0?1.88e-6:0))/1:(int(2.0)*(1.08e-6+2*(w1/4))+(2.0-int(2.0)!=0?960e-9+2*(w1/4):0))/1' ps='w1/4<419.5e-9?((1.88e-6+int(1.5)*2.08e-6)+(2.0-int(2.0)==0?1.88e-6:0))/1:((((960e-9+2*(w1/4))+0)+int(1.5)*(1.08e-6+2*(w1/4)))+(2.0-int(2.0)==0?960e-9+2*(w1/4):0))/1' nrd='270e-9/((w1/4)*4)' nrs='270e-9/((w1/4)*4)' sa='w1/4<419.5e-9?520e-9:480e-9' sb='w1/4<419.5e-9?520e-9:480e-9' sd='w1/4<419.5e-9?620e-9:540e-9' sca=0 scb=0 scc=0
+mnm3 out ibias2 0 0 n18 m=1 w=w5 l=l5 nf=4 ad='w5/4<419.5e-9?(int(2.0)*(176.4e-15+(w5/4)*200e-9)+(2.0-int(2.0)!=0?176.4e-15+(w5/4)*100e-9:0))/1:(int(2.0)*(540e-9*(w5/4))+(2.0-int(2.0)!=0?480e-9*(w5/4):0))/1' as='w5/4<419.5e-9?((((176.4e-15+(w5/4)*100e-9)+0*(w5/4<419.5e-9?420e-9:w5/4))+int(1.5)*(176.4e-15+(w5/4)*200e-9))+(2.0-int(2.0)==0?176.4e-15+(w5/4)*100e-9:0))/1:(((480e-9*(w5/4)+0*(w5/4<419.5e-9?420e-9:w5/4))+int(1.5)*(540e-9*(w5/4)))+(2.0-int(2.0)==0?480e-9*(w5/4):0))/1' pd='w5/4<419.5e-9?(int(2.0)*2.08e-6+(2.0-int(2.0)!=0?1.88e-6:0))/1:(int(2.0)*(1.08e-6+2*(w5/4))+(2.0-int(2.0)!=0?960e-9+2*(w5/4):0))/1' ps='w5/4<419.5e-9?((1.88e-6+int(1.5)*2.08e-6)+(2.0-int(2.0)==0?1.88e-6:0))/1:((((960e-9+2*(w5/4))+0)+int(1.5)*(1.08e-6+2*(w5/4)))+(2.0-int(2.0)==0?960e-9+2*(w5/4):0))/1' nrd='270e-9/((w5/4)*4)' nrs='270e-9/((w5/4)*4)' sa='w5/4<419.5e-9?520e-9:480e-9' sb='w5/4<419.5e-9?520e-9:480e-9' sd='w5/4<419.5e-9?620e-9:540e-9' sca=0 scb=0 scc=0
+mnm2 net1 ibias1 0 0 n18 m=1 w=w4 l=l4 nf=4 ad='w4/4<419.5e-9?(int(2.0)*(176.4e-15+(w4/4)*200e-9)+(2.0-int(2.0)!=0?176.4e-15+(w4/4)*100e-9:0))/1:(int(2.0)*(540e-9*(w4/4))+(2.0-int(2.0)!=0?480e-9*(w4/4):0))/1' as='w4/4<419.5e-9?((((176.4e-15+(w4/4)*100e-9)+0*(w4/4<419.5e-9?420e-9:w4/4))+int(1.5)*(176.4e-15+(w4/4)*200e-9))+(2.0-int(2.0)==0?176.4e-15+(w4/4)*100e-9:0))/1:(((480e-9*(w4/4)+0*(w4/4<419.5e-9?420e-9:w4/4))+int(1.5)*(540e-9*(w4/4)))+(2.0-int(2.0)==0?480e-9*(w4/4):0))/1' pd='w4/4<419.5e-9?(int(2.0)*2.08e-6+(2.0-int(2.0)!=0?1.88e-6:0))/1:(int(2.0)*(1.08e-6+2*(w4/4))+(2.0-int(2.0)!=0?960e-9+2*(w4/4):0))/1' ps='w4/4<419.5e-9?((1.88e-6+int(1.5)*2.08e-6)+(2.0-int(2.0)==0?1.88e-6:0))/1:((((960e-9+2*(w4/4))+0)+int(1.5)*(1.08e-6+2*(w4/4)))+(2.0-int(2.0)==0?960e-9+2*(w4/4):0))/1' nrd='270e-9/((w4/4)*4)' nrs='270e-9/((w4/4)*4)' sa='w4/4<419.5e-9?520e-9:480e-9' sb='w4/4<419.5e-9?520e-9:480e-9' sd='w4/4<419.5e-9?620e-9:540e-9' sca=0 scb=0 scc=0
+mnm1 ibias1 ibias1 0 0 n18 m=1 w=7e-6 l=1e-6 nf=1 ad=3.36e-12 as=3.36e-12 pd=14.96e-6 ps=14.96e-6 nrd=38.5714e-3 nrs=38.5714e-3 sa=480e-9 sb=480e-9 sd=0 sca=0 scb=0 scc=0
+mpm0 net2 net2 vdd! vdd! p18 m=1 w=w3 l=l3 nf=6 ad='w3/6<419.5e-9?(int(3.0)*(176.4e-15+(w3/6)*200e-9)+(3.0-int(3.0)!=0?176.4e-15+(w3/6)*100e-9:0))/1:(int(3.0)*(540e-9*(w3/6))+(3.0-int(3.0)!=0?480e-9*(w3/6):0))/1' as='w3/6<419.5e-9?((((176.4e-15+(w3/6)*100e-9)+0*(w3/6<419.5e-9?420e-9:w3/6))+int(2.5)*(176.4e-15+(w3/6)*200e-9))+(3.0-int(3.0)==0?176.4e-15+(w3/6)*100e-9:0))/1:(((480e-9*(w3/6)+0*(w3/6<419.5e-9?420e-9:w3/6))+int(2.5)*(540e-9*(w3/6)))+(3.0-int(3.0)==0?480e-9*(w3/6):0))/1' pd='w3/6<419.5e-9?(int(3.0)*2.08e-6+(3.0-int(3.0)!=0?1.88e-6:0))/1:(int(3.0)*(1.08e-6+2*(w3/6))+(3.0-int(3.0)!=0?960e-9+2*(w3/6):0))/1' ps='w3/6<419.5e-9?((1.88e-6+int(2.5)*2.08e-6)+(3.0-int(3.0)==0?1.88e-6:0))/1:((((960e-9+2*(w3/6))+0)+int(2.5)*(1.08e-6+2*(w3/6)))+(3.0-int(3.0)==0?960e-9+2*(w3/6):0))/1' nrd='270e-9/((w3/6)*6)' nrs='270e-9/((w3/6)*6)' sa='w3/6<419.5e-9?520e-9:480e-9' sb='w3/6<419.5e-9?520e-9:480e-9' sd='w3/6<419.5e-9?620e-9:540e-9' sca=0 scb=0 scc=0
+mpm2 out net3 vdd! vdd! p18 m=1 w=w2 l=l2 nf=6 ad='w2/6<419.5e-9?(int(3.0)*(176.4e-15+(w2/6)*200e-9)+(3.0-int(3.0)!=0?176.4e-15+(w2/6)*100e-9:0))/1:(int(3.0)*(540e-9*(w2/6))+(3.0-int(3.0)!=0?480e-9*(w2/6):0))/1' as='w2/6<419.5e-9?((((176.4e-15+(w2/6)*100e-9)+0*(w2/6<419.5e-9?420e-9:w2/6))+int(2.5)*(176.4e-15+(w2/6)*200e-9))+(3.0-int(3.0)==0?176.4e-15+(w2/6)*100e-9:0))/1:(((480e-9*(w2/6)+0*(w2/6<419.5e-9?420e-9:w2/6))+int(2.5)*(540e-9*(w2/6)))+(3.0-int(3.0)==0?480e-9*(w2/6):0))/1' pd='w2/6<419.5e-9?(int(3.0)*2.08e-6+(3.0-int(3.0)!=0?1.88e-6:0))/1:(int(3.0)*(1.08e-6+2*(w2/6))+(3.0-int(3.0)!=0?960e-9+2*(w2/6):0))/1' ps='w2/6<419.5e-9?((1.88e-6+int(2.5)*2.08e-6)+(3.0-int(3.0)==0?1.88e-6:0))/1:((((960e-9+2*(w2/6))+0)+int(2.5)*(1.08e-6+2*(w2/6)))+(3.0-int(3.0)==0?960e-9+2*(w2/6):0))/1' nrd='270e-9/((w2/6)*6)' nrs='270e-9/((w2/6)*6)' sa='w2/6<419.5e-9?520e-9:480e-9' sb='w2/6<419.5e-9?520e-9:480e-9' sd='w2/6<419.5e-9?620e-9:540e-9' sca=0 scb=0 scc=0
+mpm1 net3 net2 vdd! vdd! p18 m=1 w=w3 l=l3 nf=6 ad='w3/6<419.5e-9?(int(3.0)*(176.4e-15+(w3/6)*200e-9)+(3.0-int(3.0)!=0?176.4e-15+(w3/6)*100e-9:0))/1:(int(3.0)*(540e-9*(w3/6))+(3.0-int(3.0)!=0?480e-9*(w3/6):0))/1' as='w3/6<419.5e-9?((((176.4e-15+(w3/6)*100e-9)+0*(w3/6<419.5e-9?420e-9:w3/6))+int(2.5)*(176.4e-15+(w3/6)*200e-9))+(3.0-int(3.0)==0?176.4e-15+(w3/6)*100e-9:0))/1:(((480e-9*(w3/6)+0*(w3/6<419.5e-9?420e-9:w3/6))+int(2.5)*(540e-9*(w3/6)))+(3.0-int(3.0)==0?480e-9*(w3/6):0))/1' pd='w3/6<419.5e-9?(int(3.0)*2.08e-6+(3.0-int(3.0)!=0?1.88e-6:0))/1:(int(3.0)*(1.08e-6+2*(w3/6))+(3.0-int(3.0)!=0?960e-9+2*(w3/6):0))/1' ps='w3/6<419.5e-9?((1.88e-6+int(2.5)*2.08e-6)+(3.0-int(3.0)==0?1.88e-6:0))/1:((((960e-9+2*(w3/6))+0)+int(2.5)*(1.08e-6+2*(w3/6)))+(3.0-int(3.0)==0?960e-9+2*(w3/6):0))/1' nrd='270e-9/((w3/6)*6)' nrs='270e-9/((w3/6)*6)' sa='w3/6<419.5e-9?520e-9:480e-9' sb='w3/6<419.5e-9?520e-9:480e-9' sd='w3/6<419.5e-9?620e-9:540e-9' sca=0 scb=0 scc=0
+c0 net3 net6 cap
+r0 net6 out r
+.ends OTA_two_schematic
+** End of subcircuit definition.
+
+** Library name: ZYX_try
+** Cell name: tb_OTA_two
+** View name: schematic
+v7 net2 net5 DC=0 AC 1 0
+v6 net5 0 DC=900e-3 AC 0 0
+v0 vdd! 0 DC=1.8
+i9 vdd! ibias2 DC=40e-6
+i3 vdd! ibias1 DC=40e-6
+c0 net4 0 10e-12
+xi0 ibias1 ibias2 net4 net2 net5 OTA_two_schematic
+
+.control
+op
+AC DEC 10 0.01 100000K
+settype decibel out
+plot vdb(net4) xlimit 1 100000k ylabel 'small signal gain'
+settype phase out
+plot cph(net4) xlimit 1 100000k ylabel 'phase (in rad)'
+let outd = 180/PI*cph(net4)
+settype phase outd
+plot outd xlimit 1 100000k ylabel 'phase'
+print(net4)
+.endc
+
+.END
